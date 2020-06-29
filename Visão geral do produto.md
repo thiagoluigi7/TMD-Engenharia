@@ -9,7 +9,9 @@ projetasse um sistema para suas lojas.
 As lojas possuem funcionários que além de atendenderem os clientes estão lá como especialistas para dar dicas, sugestões, 
 oferecer ajuda em alguma fase, ajuda com os aparelhos, etc..
 Os clientes estão lá para locar jogos <strike>antigos</strike> clássicos! 😌
+<br></br>
 Além disto podem também locar videogames lendários tais como o Nintendinho, Nintendo 64, Mega Drive, etc. #gameon!🕹 
+<br></br>
 A RetroVibes™ é reconhecida por trabalhar com grandes empresas e aqui não é diferente. Com um canal de comunicação 
 direto com vários desenvolvedores e estúdios ela consegue garantir jogos clássicos adaptados as necessidades do mundo moderno.
 Os estúdios atualizam seus jogos para adaptá-los à experiência RetroVibes™ Games. Tais como: contagem de horas, conquista,
@@ -44,6 +46,29 @@ No diretório raiz há 6 pastas:
 
 - Padões Adotados
 
+    
+Há também outros arquivos na raíz como:
+
+- homepage.php
+
+- landpage.html
+
+    Aqui é onde o usuário <strike>cai</strike> aterrisa quando acessa o site.
+
+- README.md
+
+- Teste-Davi
+
+    Upload para testar se o Davi possui acesso ao repositório.
+
+- TesteThiago
+
+    Upload para testar se o Thiago possui acesso ao repositório.
+
+- Verificação Matheus.txt
+
+    Upload para testar se o Matheus possui acesso ao repositório.
+
+- Visão geral do produto
+
     Você está aqui!
-
-
