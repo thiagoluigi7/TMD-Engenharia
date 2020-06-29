@@ -20,14 +20,5 @@ Instalar a IDE e compilador a serem utilizados.
 
 3-Escreva num arquivo ou papel uma visão geral do produto (rápida descrição para que serve o sistema, quais são as principais funcionalidades, sistemas relacionados (se houver), tipos de usuários previstos para o sistema, estrutura de diretório do projeto etc. Algumas dessas informações deverão ser alteradas ao longo do projeto, conforme o projeto é alterado)
 
-4-"Criar o arquivo README no repositório do projeto, contendo informações da tarefa #2, uma breve descrição do produto a ser desenvolvido. Tenha no README um seção chamada TECNOLOGIAS UTILIZADAS na qual deverá estar descrita a liguagem utilizada e versão, Banco de Dados utilizado e Versão, Servidor utilizado no desenvolvimento e versão, dentre outras tecnologias utilizadas. Alguns README que podem servir de inspiração para iniciar o seu README: 
-   https://github.com/amphp/amp/blob/master/README.md
-   https://github.com/twbs/bootstrap/blob/master/README.md
-
-Dicas de Formatação do README no GITHUB: https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax
-
 5-Especificar as características que devem ser obedecidas ao descrever os requisitos do projeto. Por exemplo, a nomemclatura dos requisitos como RF e RNF. Além disto, descreva pelo menos três regras que o documento de requisitos seguirá. Essas regras tratam das regras de "Especificação de Requisitos" contidas no capítulo 1 do livro de Engenharia de Software de Rogério Magela, usado em sala de aula. O aluno deverá criar um documento chamado "Regras de Verificação e Analise de Requisitos" e armazená-lo na pasta denominada "Padrões Adotados".
 Usar funcionalidades "Tags" e "Release" do GitHub para estabelecer a primeira baseline do projeto. Esta baseline deve conter toda a documentação de requisitos do projeto.
-
-6-Apresentar em sala de aula o cumprimento de todas as etapas acima, mostrando comprovante de feitio, comentando dificuldades encontradas.
-
