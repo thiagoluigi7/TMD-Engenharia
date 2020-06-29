@@ -5,13 +5,22 @@ uma breve descrição do produto a ser desenvolvido
 
 # TECNOLOGIAS UTILIZADAS
 
+# Linguagem Utilizada
+´PHP 7.4.7´
+
+# Banco de Dados
+´MySql´
+
+# Servidor
+´XAMPP 7.4.7´
+
 "Instalar em sua máquina o XAMPP. Iniciar o Apache e o MYSQL e testar se estão funcionando. Criar um formulário simples e capturar os dados do formulário via PHP, imprimindo na tela, para ter certeza que o Apache está funcionando adequadamente junto com a linguagem PHP.
 Instalar o GIT na própria máquina (console ou ferramenta gráfica) para realizar controle de versão durante o desenvolvimento.
 Instalar a IDE e compilador a serem utilizados.
 
 Escreva num arquivo ou papel uma visão geral do produto (rápida descrição para que serve o sistema, quais são as principais funcionalidades, sistemas relacionados (se houver), tipos de usuários previstos para o sistema, estrutura de diretório do projeto etc. Algumas dessas informações deverão ser alteradas ao longo do projeto, conforme o projeto é alterado)
 
-. Tenha no README um seção chamada TECNOLOGIAS UTILIZADAS na qual deverá estar descrita a liguagem utilizada e versão, Banco de Dados utilizado e Versão, Servidor utilizado no desenvolvimento e versão, dentre outras tecnologias utilizadas. Alguns README que podem servir de inspiração para iniciar o seu README: 
+. Tenha no README um seção chamada TECNOLOGIAS UTILIZADAS na qual deverá estar descrita a e, Banco de Dados utilizado e Versão, Servidor utilizado no desenvolvimento e versão, dentre outras tecnologias utilizadas. Alguns README que podem servir de inspiração para iniciar o seu README: 
    https://github.com/amphp/amp/blob/master/README.md
    https://github.com/twbs/bootstrap/blob/master/README.md
 
