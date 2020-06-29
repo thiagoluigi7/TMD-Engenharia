@@ -10,7 +10,7 @@ As lojas possuem funcionários que além de atendenderem os clientes estão lá 
 oferecer ajuda em alguma fase, ajuda com os aparelhos, etc..
 Os clientes estão lá para locar jogos <strike>antigos</strike> clássicos! 😌
 <br></br>
-Além disto podem também locar videogames lendários tais como o Nintendinho, Nintendo 64, Mega Drive, etc. #gameon!🕹 
+Além disto podem também locar videogames lendários tais como o Nintendinho, Nintendo 64, Mega Drive, etc. #gameon! 🕹 
 <br></br>
 A RetroVibes™ é reconhecida por trabalhar com grandes empresas e aqui não é diferente. Com um canal de comunicação 
 direto com vários desenvolvedores e estúdios ela consegue garantir jogos clássicos adaptados as necessidades do mundo moderno.
@@ -51,11 +51,16 @@ Há também outros arquivos na raíz como:
 
 - homepage.php
 
+    Aqui é a página inicial que é diferenciada de acordo com quem a acessa. Um cliente terá uma tela e um funcionário terá outra.
+
 - landpage.html
 
-    Aqui é onde o usuário <strike>cai</strike> aterrisa quando acessa o site.
+    Aqui é onde o usuário <strike>cai</strike> aterrisa quando acessa o site. Daqui ele deve informar se é funcionário ou cliente 
+    e então será levado para a homepage.php
 
 - README.md
+
+    Descrição rápida sobre o repositório
 
 - Teste-Davi
 
@@ -71,4 +76,4 @@ Há também outros arquivos na raíz como:
 
 - Visão geral do produto
 
-    Você está aqui!
+    Descrição sobre o produto, você está aqui!
