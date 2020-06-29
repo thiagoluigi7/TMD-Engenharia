@@ -9,7 +9,7 @@ uma breve descrição do produto a ser desenvolvido
 ```PHP 7.4.7```
 
 # Banco de Dados
-```MySql```
+```MySql/MariaDB```
 
 # Servidor
 ```APACHE 2.4.43```
