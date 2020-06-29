@@ -1,15 +1,15 @@
 # TMD Engenharia
 
 # DESCRIÇÃO
-uma breve descrição do produto a ser desenvolvido
+O nosso projeto vai ser um sistema web, de uma loja de locação de cartuchos de video games.
 
 # TECNOLOGIAS UTILIZADAS
 
 # Linguagem Utilizadas
-```PHP 7.4.7```
+```PHP 7.4.7/HTML/CSS```
 
 # Banco de Dados
-```MySql/MariaDB```
+```MySql/MariaDB 10.4.13```
 
 # Servidor
 ```APACHE 2.4.43```
