@@ -6,13 +6,13 @@ uma breve descrição do produto a ser desenvolvido
 # TECNOLOGIAS UTILIZADAS
 
 # Linguagem Utilizadas
-'PHP 7.4.7'
+```PHP 7.4.7```
 
 # Banco de Dados
-'MySql'
+```MySql```
 
 # Servidor
-'APACHE 2.4.43'
+```APACHE 2.4.43```
 
 "Instalar em sua máquina o XAMPP. Iniciar o Apache e o MYSQL e testar se estão funcionando. Criar um formulário simples e capturar os dados do formulário via PHP, imprimindo na tela, para ter certeza que o Apache está funcionando adequadamente junto com a linguagem PHP.
 Instalar o GIT na própria máquina (console ou ferramenta gráfica) para realizar controle de versão durante o desenvolvimento.
