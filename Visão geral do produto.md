@@ -46,6 +46,7 @@ No diretório raiz há 6 pastas:
 
 - Padões Adotados
 
+    Esta pasta contém um arquivo que descreve como será a padronização do repositório.
     
 Há também outros arquivos na raíz como:
 
