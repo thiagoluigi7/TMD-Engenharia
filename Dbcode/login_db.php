@@ -12,7 +12,7 @@
             die("A conexão falhou: " . $conn->connect_error);
         }
 
-        $sql_login_user = "SELECT * FROM users WHERE email='%s' AND pass ='%s'";
+        $sql_login_user = "SELECT * FROM clientes WHERE email='%s' AND pass ='%s'";
         $sql_login_user = sprintf ($sql_login_user, $email, $senha);
 
         if (mysqli_num_rows($conn->query($sql_login_user)) > 0) {

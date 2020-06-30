@@ -20,7 +20,7 @@
             $sql_edit_user_pass = sprintf($sql_edit_user_pass, $senha, $usuario);
             
             //Salva as informações antigas para caso o update dê errado
-            $sql_bkp_user = "SELECT * FROM users WHERE email='%s'";
+            $sql_bkp_user = "SELECT * FROM clientes WHERE email='%s'";
             $sql_bkp_user = sprintf($sql_bkp_user, $usuario);
             $old_data = ($conn->query($sql_bkp_user));
             if ($old_data->num_rows > 0) {
@@ -62,7 +62,7 @@
             $sql_edit_user_name = sprintf($sql_edit_user_name, $nome, $usuario);
 
             //Salva as informações antigas para caso o update dê errado
-            $sql_bkp_user = "SELECT * FROM users WHERE email='%s'";
+            $sql_bkp_user = "SELECT * FROM clientes WHERE email='%s'";
             $sql_bkp_user = sprintf($sql_bkp_user, $usuario);
             $old_data = ($conn->query($sql_bkp_user));
             if ($old_data->num_rows > 0) {
@@ -92,7 +92,7 @@
             $sql_edit_user_pass = sprintf($sql_edit_user_pass, $senha, $usuario);
 
             //Salva as informações antigas para caso o update dê errado
-            $sql_bkp_user = "SELECT * FROM users WHERE email='%s'";
+            $sql_bkp_user = "SELECT * FROM clientes WHERE email='%s'";
             $sql_bkp_user = sprintf($sql_bkp_user, $usuario);
             $old_data = ($conn->query($sql_bkp_user));
             if ($old_data->num_rows > 0) {
