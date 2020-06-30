@@ -67,11 +67,11 @@ Há também outros arquivos na raíz como:
 
     Upload para testar se o Davi possui acesso ao repositório.
 
-- TesteThiago
+- Teste-Thiago
 
     Upload para testar se o Thiago possui acesso ao repositório.
 
-- Verificação Matheus.txt
+- Teste-Matheus.txt
 
     Upload para testar se o Matheus possui acesso ao repositório.
 
