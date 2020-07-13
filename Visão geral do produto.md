@@ -24,10 +24,6 @@ RetroVibes™ Games está propondo.
 
 No diretório raiz há 6 pastas:
 
-- Bkp
-
-    Esta pasta possui arquivos antigos provindos do XAMPP que não podem ser deletados ainda.
-
 - Controle
 
     Esta pasta possui os códigos gerais.
@@ -38,15 +34,19 @@ No diretório raiz há 6 pastas:
 
 - Database
 
-    Aqui está os arquivos do banco de dados do sistema.
+    Aqui estão os arquivos do banco de dados do sistema.
 
 - Dbcode
 
-    Aqui está os códigos usados para a interação com o banco de dados.
+    Aqui estão os códigos usados para a interação com o banco de dados.
 
-- Padões Adotados
+- Padrões Adotados
 
     Esta pasta contém um arquivo que descreve como será a padronização do repositório.
+
+- Requisitos
+
+    Esta pasta contém o documento de requisitos. E dentro da pasta bkp está uma versão antiga do documento que é mantida só para backup.
     
 Há também outros arquivos na raíz como:
 
