@@ -10,6 +10,22 @@
         private $senha;
         private $endereco;
 
+        function __construct(
+            $nome,
+            $cpf,
+            $email,
+            $telefone,
+            $senha,
+            $endereco
+        ) {
+            $this->nome = $nome;
+            $this->cpf = $cpf;
+            $this->email = $email;
+            $this->telefone = $telefone;
+            $this->senha = $senha;
+            $this->endereco = $endereco;
+        }
+
         function getNome() {
             return $this->nome;
         }
