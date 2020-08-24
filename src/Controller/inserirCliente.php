@@ -13,7 +13,7 @@
     if($clientedao->salvar($cliente, $connection) == TRUE) {
         echo "<script type='text/javascript'>location.href = '/View/Gerente/IS_Sucesso.html';</script>";
     } else {
-        echo "Erro";
+        echo "<script type='text/javascript'>location.href = '/View/Gerente/IE_Erro.html';</script>";
     }
 
 ?>
