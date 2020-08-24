@@ -1,6 +1,6 @@
 <?php
 
-    class Funcionatio {
+    class Funcionario {
         
         private $id;
         private $nome;
@@ -11,37 +11,61 @@
         private $senha;
         private $endereco;
 
-        function criarJogo() {
-
+        function __construct(
+            $nome, 
+            $cpf, 
+            $email, 
+            $salario, 
+            $telefone, 
+            $senha, 
+            $endereco
+        ) {
+            $this->nome = $nome;
+            $this->cpf = $cpf;
+            $this->email = $email;
+            $this->salario = $salario;
+            $this->telefone = $telefone;
+            $this->senha = $senha;
+            $this->endereco = $endereco;
         }
 
-        function verJogos() {
-
+        function getNome() {
+            return $this->nome;
         }
 
-        function atualizarJogo($idJogo) {
-
+        function getCpf() {
+            return $this->cpf;
         }
 
-        function deletarJogo($idJogo) {
-
+        function getEmail() {
+            return $this->email;
         }
 
-        function criarVideoGame() {
-
+        function getSalario() {
+            return $this->salario;
         }
 
-        function verVideoGames() {
-
+        function getTelefone() {
+            return $this->telefone;
         }
 
-        function atualizarVideoGame($idVideoGame) {
-
+        function getSenha() {
+            return $this->senha;
         }
 
-        function deletarVideoGame($idVideoGame) {
-            
+        function getEndereco() {
+            return $this->endereco;
         }
+
+        function __toString() {
+            return "CPF: "      . $this->getCpf()      . "<br>" . 
+                   "Nome: "     . $this->getNome()     . "<br>" .
+                   "Email: "    . $this->getEmail()    . "<br>" .
+                   "Salário: "  . $this->getSalario()  . "<br>" .
+                   "Telefone: " . $this->getTelefone() . "<br>" .
+                   "Senha: "    . $this->getSenha      . "<br>" .
+                   "Endereço: " . $this->getEndereco() . "<br>";
+                }
 
     }
 
