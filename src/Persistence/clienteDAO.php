@@ -41,6 +41,13 @@
 
         }
 
+        function consultar($connection) {
+
+            $sql = "SELECT * FROM `cliente`";
+            return $connection->query($sql);
+
+        }
+
         function consultarCPF($cpf, $connection) {
             $sql = "SELECT * FROM `cliente`";
             $res = $connection->query($sql);

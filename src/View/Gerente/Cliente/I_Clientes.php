@@ -11,6 +11,8 @@
 
         <a href="I_EditarCliente.html"><button>Editar Cliente</button> <br></a> <br>
 
+        <a href='../../../Controller/consultarClientes.php'><button>Mostrar Clientes</button> <br></a> <br>
+
 
     </body>
 </html>
