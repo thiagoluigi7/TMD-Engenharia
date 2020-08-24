@@ -5,16 +5,16 @@
     </head>
 
     <body>
-        <form action="I_AdicionarLocação.php" method="POST">
+        <form action="../../../Controller/CRUDLocacao/inserirLocacao.php" method="POST">
             <h1>Adicionar Locação</h1><br>
             
-            ID: <input type="text" name="id"><br>
-            Cliente: <input type="text" name="cliente"><br>
-            Produto: <input type="text" name="plataforma"><br>
-            Data Locação: <input type="date" name="dataLocação"><br>
-            Data Devolução: <input type="date" name="dataDevolução"><br>
-            R$: <input type="text" name="R$"><br>
-            Funcionario: <input type="text" name="funcionario"><br>
+            <!--ID: <input type="text" name="id"><br>-->
+            Data Locação: <input type="date" name="dataLocacao" placeholder="1999-01-01"><br>
+            Data Devolução: <input type="date" name="dataDevolucao" placeholder="1999-01-01"><br>
+            R$: <input type="text" name="R$" placeholder="10.00"><br>
+            Funcionario: <input type="text" name="funcionario" placeholder="Digite o id do funcionário"><br>
+            Cliente: <input type="text" name="cliente" placeholder="Digite o id do cliente"><br>
+            Produto: <input type="text" name="plataforma" placeholder="Digite o id do produto"><br>     
 
             <input type="submit" value="Adicionar">
         </form>

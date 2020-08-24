@@ -140,7 +140,7 @@
         } else if ($_POST['funcao'] == "funcionario") {
             if(autenticar($_POST["cpf"], $_POST["senha"], $_POST["funcao"]) == true) {
                 //echo "Funcionário autenticado.";
-                echo "<script type='text/javascript'>location.href = '/View/Funcionario/I_HomeFunc.php';</script>";
+                echo "<script type='text/javascript'>location.href = '/View/Funcionario/I_HomeFunc.html';</script>";
             } else {
                 //echo "Erro ao autenticar o funcionário.";
                 echo "<script type='text/javascript'>location.href = '/View/IE_Login.html';</script>";
