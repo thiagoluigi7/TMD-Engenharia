@@ -5,20 +5,14 @@
         function __construct() {}
 
         function salvar($cliente, $connection) {
-        
-            $nome = $cliente->getNome();
-            $cpf = $cliente->getCpf();
-            $email = $cliente->getEmail();
-            $telefone = $cliente->getTelefone();
-            $senha = $cliente->getSenha();
-            $endereco = $cliente->getEndereco();
 
-            $sql = "INSERT INTO `cliente`(`nome`, `cpf`, `email`, `telefone`, `senha`, `endereco`) VALUES ('" . $nome     . "','" . 
-                                                                                                                $cpf      . "','" . 
-                                                                                                                $email    . "','" . 
-                                                                                                                $telefone . "','" .
-                                                                                                                $senha    . "','" .
-                                                                                                                $endereco . "')";
+            $sql = "INSERT INTO `cliente`(`nome`, `cpf`, `email`, `telefone`, `senha`, `endereco`) VALUES ('" . $cliente->getNome()     . "','" . 
+                                                                                                                $cliente->getCpf()      . "','" . 
+                                                                                                                $cliente->getEmail()    . "','" . 
+                                                                                                                $cliente->getTelefone() . "','" .
+                                                                                                                $cliente->getSenha()    . "','" .
+                                                                                                                $cliente->getEndereco() . "')";
+                                                                                                                
             if($connection->query($sql) === TRUE) {
                 $connection->close();
                 return true;
