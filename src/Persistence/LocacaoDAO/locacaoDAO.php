@@ -45,7 +45,7 @@
 
         function consultar($connection) {
 
-            $sql = "SELECT * FROM `cliente`";
+            $sql = "SELECT * FROM `locacao`";
             return $connection->query($sql);
 
         }
