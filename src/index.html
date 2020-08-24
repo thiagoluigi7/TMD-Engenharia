@@ -1,24 +1,31 @@
 <html>
     <head>
+        <link rel="stylesheet" href="View/css/index.css">
         <title>Login</title>
         <meta charset="UTF-8">
 
     </head>
 
     <body>
-        <form action="Controller/index.php" method="POST">
+        <div id='interface' >
+            <div id='retanguloRoxo' ></div>
+            <div id='fundoEsquerdo'></div>
 
-            CPF: <input type="text" name="cpf" required> <br>
-            Senha: <input type="password" name="senha" required> <br>
+            <div id='fundoDireita'>
+                <form action="Controller/index.php" method="POST">
 
-            Gerente: <input type="radio" name="funcao" value="gerente"> <br>
-            Funcionario: <input type="radio" name="funcao" value="funcionario"> <br>
-            Cliente: <input type="radio" name="funcao" value="cliente"> <br>
+                    CPF: <input type="text" name="cpf" required> <br>
+                    Senha: <input type="password" name="senha" required> <br>
 
-            <input type="submit" name="login" value="Login"> <br>
+                    Gerente: <input type="radio" name="funcao" value="gerente"> <br>
+                    Funcionario: <input type="radio" name="funcao" value="funcionario"> <br>
+                    Cliente: <input type="radio" name="funcao" value="cliente"> <br>
 
-        </form>
+                    <input type="submit" name="login" value="Login"> <br>
+            </div>
 
+            </form>
+        </div>
     </body>
 
 </html>
