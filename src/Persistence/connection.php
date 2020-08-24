@@ -12,7 +12,7 @@
             $this->servername = "localhost";
             $this->username = "root";
             $this->password = "";
-            $this->database = "retrowavedbtest";
+            $this->database = "retrowavedb";
         }
 
         function getConnection () {
