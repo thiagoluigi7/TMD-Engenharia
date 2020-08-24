@@ -50,6 +50,15 @@
             return $this->endereco;
         }
 
+        function __toString() {
+            return "CPF: "      . $this->getCpf()      . "<br>" . 
+                   "Nome: "     . $this->getNome()     . "<br>" .
+                   "Email: "    . $this->getEmail()    . "<br>" .
+                   "Telefone: " . $this->getTelefone() . "<br>" .
+                   "Senha: "    . $this->getSenha      . "<br>" .
+                   "Endereço: " . $this->getEndereco() . "<br>";
+                }
+
     }
 
 ?>
