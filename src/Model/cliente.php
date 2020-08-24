@@ -14,17 +14,24 @@
             return $this->nome;
         }
 
-
-        function verDados() {
-
+        function getCpf() {
+            return $this->cpf;
         }
 
-        function atualizarDados() {
-
+        function getEmail() {
+            return $this->email;
         }
 
-        function verHistorico() {
-            
+        function getTelefone() {
+            return $this->telefone;
+        }
+
+        function getSenha() {
+            return $this->senha;
+        }
+
+        function getEndereco() {
+            return $this->endereco;
         }
 
     }
