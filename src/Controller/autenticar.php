@@ -1,8 +1,5 @@
 <?php
 
-    include_once "../Model/gerente.php";
-    include_once "../Model/funcionario.php";
-    include_once "../Model/cliente.php";
     include_once "../Persistence/connection.php";
 
     function autenticar($cpf, $senha, $tipo) {
