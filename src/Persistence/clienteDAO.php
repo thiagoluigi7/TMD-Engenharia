@@ -7,7 +7,6 @@
         function salvar($cliente, $connection) {
         
             $nome = $cliente->getNome();
-            echo $nome;
             $cpf = $cliente->getCpf();
             $email = $cliente->getEmail();
             $telefone = $cliente->getTelefone();
@@ -31,6 +30,20 @@
 
         }
 
+        function remover($cpf, $connection) {
+
+            $sql = "DELETE FROM `cliente` WHERE `cliente`.`cpf` = '" . $cpf . "'";
+
+            if($connection->query($sql) === TRUE) {
+                $connection->close();
+                return true;
+            } else {
+                echo "Erro ao remover cliente: " . $connection->error;
+                $connection->close();
+                return false;
+            }
+
+        }
     }
 
 ?>
