@@ -13,7 +13,7 @@
     if($funcionariodao->salvar($funcionario, $connection) == TRUE) {
         echo "<script type='text/javascript'>location.href = '/View/Gerente/IS_Sucesso.html';</script>";
     } else {
-        //echo "<script type='text/javascript'>location.href = '/View/Gerente/IE_Erro.html';</script>";
+        echo "<script type='text/javascript'>location.href = '/View/Gerente/IE_Erro.html';</script>";
     }
 
 ?>
