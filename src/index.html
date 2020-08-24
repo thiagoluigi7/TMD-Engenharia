@@ -8,20 +8,46 @@
 
     <body>
         <div id='interface' >
-            <div id='retanguloRoxo' ></div>
-            <div id='fundoEsquerdo'></div>
+            <div id='retangulo' class='roxo' ></div>
+
+            <div id='fundoEsquerdo'>
+                <h1>Retro Waves</h1>
+                    <p>
+                        Este é o sistema web Retro Wave® para a subsidiária da rede RetroVibes™.
+                    </p>
+                    <p>
+                        A RetroVibes™ é reconhecida por trabalhar com grandes empresas. Com um canal de comunicação direto com vários desenvolvedores e estúdios ela consegue garantir jogos clássicos adaptados as necessidades do mundo moderno.
+                    </p>
+
+            </div>
 
             <div id='fundoDireita'>
                 <form action="Controller/index.php" method="POST">
 
-                    CPF: <input type="text" name="cpf" required> <br>
-                    Senha: <input type="password" name="senha" required> <br>
+                    <h1>Login</h1>
+                    <input type="text" name="cpf" placeholder='CPF' required> <br>
 
-                    Gerente: <input type="radio" name="funcao" value="gerente"> <br>
-                    Funcionario: <input type="radio" name="funcao" value="funcionario"> <br>
-                    Cliente: <input type="radio" name="funcao" value="cliente"> <br>
+                    <input type="password" name="senha" placeholder='Senha'required> <br>
 
-                    <input type="submit" name="login" value="Login"> <br>
+
+                    <label class="container"> Gerente 
+                    <input type="radio" name="funcao" checked="checked" value="gerente">
+                    <span class="checkmark" ></span>
+                    </label>
+
+                    <label class="container"> Funcionario 
+                        <input type="radio" name="funcao" value="funcionario">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container"> Cliente 
+                        <input type="radio" name="funcao" value="cliente">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <div id="botao">
+                    <input  type="submit" name="login" value="Login" class="botaoEnviar">
+                    </div>
             </div>
 
             </form>
