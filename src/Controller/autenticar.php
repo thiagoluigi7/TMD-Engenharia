@@ -36,11 +36,12 @@
         if (!empty($res) and $res->num_rows > 0) {
             while ($registro = $res->fetch_assoc()) {
                 if (($registro['cpf'] == $cpf) and ($registro['senha'] == $senha))  {
+                    $conn->close();
                     return true;
-                } else {
-                    return false;
-                }
+                } 
             }
+            $conn->close();
+            return false;
         } else {
             echo "Falha ao realizar login: " . $conn->error;
             $conn->close();
@@ -54,11 +55,12 @@
         if (!empty($res) and $res->num_rows > 0) {
             while ($registro = $res->fetch_assoc()) {
                 if (($registro['cpf'] == $cpf) and ($registro['senha'] == $senha))  {
+                    $conn->close();
                     return true;
-                } else {
-                    return false;
                 }
             }
+            $conn->close();
+            return false;
         } else {
             echo "Falha ao realizar login: " . $conn->error;
             $conn->close();
@@ -72,11 +74,12 @@
         if (!empty($res) and $res->num_rows > 0) {
             while ($registro = $res->fetch_assoc()) {
                 if (($registro['cpf'] == $cpf) and ($registro['senha'] == $senha))  {
+                    $conn->close();
                     return true;
-                } else {
-                    return false;
                 }
             }
+            $conn->close();
+            return false;
         } else {
             echo "Falha ao realizar login: " . $conn->error;
             $conn->close();
