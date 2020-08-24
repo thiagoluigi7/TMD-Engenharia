@@ -39,7 +39,14 @@
                 return false;
             }
 
-        } 
+        }
+
+        function consultar($connection) {
+
+            $sql = "SELECT * FROM `funcionario`";
+            return $connection->query($sql);
+
+        }
 
 
     }
