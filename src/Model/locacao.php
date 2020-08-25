@@ -2,6 +2,7 @@
 
     class Locacao {
 
+        private $idLoc;
         private $dataInicial;
         private $dataFinal;
         private $valorTotal;
@@ -10,6 +11,7 @@
         private $item;
 
         function __construct(
+            $idLoc,
             $dataInicial,
             $dataFinal,
             $valorTotal,
@@ -18,6 +20,7 @@
             $item
         ) {
 
+            $this->idLoc = $idLoc;
             $this->dataInicial = $dataInicial;
             $this->dataFinal = $dataFinal;
             $this->valorTotal = $valorTotal;
@@ -25,6 +28,10 @@
             $this->nomeCliente = $nomeCliente;
             $this->item = $item;
 
+        }
+
+        function getId() {
+            return $this->idLoc;
         }
 
         function getDataInicial() {
@@ -50,6 +57,16 @@
         function getItem() {
             return $this->item;
         }
+
+        function __toString() {
+            return "ID: "      . $this->getId()      . "<br>" . 
+                   "Data Inicial: "     . $this->getDataInicial()     . "<br>" .
+                   "Data Final: "    . $this->getDataFinal()    . "<br>" .
+                   "Valor Total: " . $this->getValorTotal() . "<br>" .
+                   "Nome do funcionário: "    . $this->getNomeFuncionario()      . "<br>" .
+                   "Nome do cliente: " . $this->getNomeCliente() . "<br>" . 
+                   "Item: " . $this->getItem() . "<br>";
+                }
 
     }
 

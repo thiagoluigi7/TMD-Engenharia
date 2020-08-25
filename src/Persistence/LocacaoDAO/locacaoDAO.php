@@ -28,9 +28,36 @@
 
         }
 
-        function remover($cpf, $connection) {
+        function consultarId($id, $connection) {
+            $sql = "SELECT * FROM `locacao`";
+            $res = $connection->query($sql);
+            if (!empty($res) and $res->num_rows > 0) {
+                while ($registro = $res->fetch_assoc()) {
+                    if ($registro['idLoc'] == $id)  {
+                        $id = $registro['idLoc'];
+                        $itemId = $registro['Itens_idItem'];
+                        $idCliente = $registro['Cliente_idCliente'];
+                        $idFuncionario = $registro['Funcionario_idFuncionario'];
+                        $dataInicial = $registro['dataInicial'];
+                        $dataFinal = $registro['dataFinal'];
+                        $valorTotal = $registro['valorTotal'];
+                        $locacao = new Locacao($id, $dataInicial, $dataFinal, $valorTotal, $idFuncionario, $idCliente, $itemId); 
+                        $connection->close();
+                        return $locacao;
+                    } 
+                }
+                $connection->close();
+                return false;
+            } else {
+                echo "Falha ao realizar login: " . $connection->error;
+                $connection->close();
+                return $connection->errno;
+            }
+        }
 
-            $sql = "DELETE FROM `cliente` WHERE `cliente`.`cpf` = '" . $cpf . "'";
+        function remover($locacao, $connection) {
+
+            $sql = "DELETE FROM `locacao` WHERE `locacao`.`idLoc` = '" . $locacao->getId() . "'";
 
             if($connection->query($sql) === TRUE) {
                 $connection->close();
