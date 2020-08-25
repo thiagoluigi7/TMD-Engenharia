@@ -59,13 +59,13 @@
         }
 
         function __toString() {
-            return "ID: "      . $this->getId()      . "<br>" . 
-                   "Data Inicial: "     . $this->getDataInicial()     . "<br>" .
-                   "Data Final: "    . $this->getDataFinal()    . "<br>" .
-                   "Valor Total: " . $this->getValorTotal() . "<br>" .
-                   "Nome do funcionário: "    . $this->getNomeFuncionario()      . "<br>" .
-                   "Nome do cliente: " . $this->getNomeCliente() . "<br>" . 
-                   "Item: " . $this->getItem() . "<br>";
+            return "ID: "                   . $this->getId()              . "<br>" . 
+                   "Data Inicial: "         . $this->getDataInicial()     . "<br>" .
+                   "Data Final: "           . $this->getDataFinal()       . "<br>" .
+                   "Valor Total: "          . $this->getValorTotal()      . "<br>" .
+                   "Nome do funcionário: "  . $this->getNomeFuncionario() . "<br>" .
+                   "Nome do cliente: "      . $this->getNomeCliente()     . "<br>" . 
+                   "Item: "                 . $this->getItem()            . "<br>";
                 }
 
     }

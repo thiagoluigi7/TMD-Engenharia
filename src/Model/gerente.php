@@ -25,54 +25,34 @@ include_once '../Persistence/connection.php';
 
         }
 
-        function autenticar($cpf, $senha) {
-            $connection = new Connection();
-            $connection->getConnection();
-            $sql = "SELECT * FROM 'gerente'";
-            $res = $connection->query($sql);
-            if ($res->num_rows > 0) {
-                while ($registro = $res->fetch_assoc()) {
-                    if (($registro['cpf'] == $cpf) and ($registro['senha'] == $senha))  {
-                        return true;
-                    } else {
-                        return false;
-                    }
-
-                }
-            }
+        function getNome() {
+            return $this->nome;
         }
 
-        function inserirFuncionario($nome, $cpf, $email, $salario, $telefone, $senha, $endereco) {
-
+        function getCpf() {
+            return $this->cpf;
         }
 
-        function verFuncionarios() {
-
+        function getEmail() {
+            return $this->email;
         }
 
-        function atualizarFuncionario($idFunc) {
-
+        function getSalario() {
+            return $this->salario;
         }
-
-        function deletarFuncionario($idFunc) {
-
+        
+        function getTelefone() {
+            return $this->telefone;
         }
-
-        function  inserirCliente() {
-
+        
+        function getSenha() {
+            return $this->senha;
         }
-
-        function verClientes() {
-
+       
+        function getEndereco() {
+            return $this->endereco;
         }
-
-        function atualizarCliente($idCliente) {
-
-        }
-
-        function deletarCliente($idCliente) {
-
-        }
+        
 
     }
 
