@@ -17,6 +17,14 @@
      
 }
 
+.margintop150 {
+    margin-top: 150px;
+}
+
+.margintop100 {
+    margin-top: 100px;
+}
+
 .roxo {
     background: #9B51E0;
 }
@@ -37,6 +45,14 @@
     background: #4e9aff;
 }
 
+.azulClaro {
+    background: #4e9bffb9;
+}
+
+.azulEscuro {
+    background: #4c6faf;
+}
+
 .branco {
     color: white;
 }
@@ -48,3 +64,4 @@
 .vermelhoClaro{
     background: #cc0000b4
 }
+
