@@ -45,7 +45,12 @@
 
         function consultar($connection) {
 
-            $sql = "SELECT * FROM `locacao`";
+            $sql = "SELECT C.nome AS nomeCliente, C.email AS emailCliente, F.nome AS nomeFuncionario, L.dataIniciaL AS dataInicial, L.dataFinaL AS dataFinal, L.valorTotal AS valorTotal
+                        FROM locacao AS L
+                            JOIN cliente AS C ON L.Cliente_idCliente = C.idCliente
+                            JOIN funcionario AS F on L.Funcionario_idFuncionario = F.idFuncionario";
+                        // WHERE L.
+
             return $connection->query($sql);
 
         }
