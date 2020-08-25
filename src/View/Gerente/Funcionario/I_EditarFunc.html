@@ -1,16 +1,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Editar Funcionario</title>
+        <title>Editar Funcionário</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Gerente.css">
     </head>
 
     <body>
-        <form action="" method="POST">
-            <h1>Editar Funcionario</h1>
+        <div id="interface">
+            <form action="" method="POST">
+                <div id="retangulo" class="amarelo"></div>
+                <div id="fundoIserir">
+                    <h1 class="textoEditar">Editar Funcionário</h1>
 
-            cpf: <input type="text" name="cpf" required> <br>
-            
-            <input type="submit" value="Editar">
-        </form>
+                    <input type="text" name="cpf" placeholder="CPF" required> <br>
+                    
+                    <div id="botao">
+                        <input type="submit" value="Editar" class="botaoEnviar amareloClaro">
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
