@@ -2,19 +2,27 @@
     <head>
         <meta charset="UTF-8">
         <title>Adicionar Jogo</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Funcionario.css">
     </head>
 
     <body>
-        <form action="AdicionarJogos.php" method="POST">
-            <h1>Adicionar Jogo</h1>
-            
-            ID: <input type="text" name="id">
-            Nome: <input type="text" name="nome">
-            Plataforma: <input type="text" name="plataforma">
-            Copias: <input type="text" name="copias">
-
-            <input type="submit" value="Adicionar">
-
-        </form>
+        <div id="interface">
+            <div id="retangulo" class="vermelho"></div>
+            <form action="AdicionarJogos.php" method="POST">
+                <div id="fundoIserir">
+                    <h1>Adicionar Jogo</h1>
+                    
+                    <input type="text" name="id" placeholder="ID">
+                    <input type="text" name="nome" placeholder="Nome">
+                    <input type="text" name="plataforma" placeholder="Plataforma">
+                    <input type="text" name="copias" placeholder="Cópias">
+                    
+                    <div id="botao">
+                        <input type="submit" value="Adicionar" class="botaoEnviar vermelhoClaro">
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
