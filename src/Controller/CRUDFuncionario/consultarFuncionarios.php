@@ -75,7 +75,7 @@
 
         }
     }
-    echo "</div></body>"
+    echo "</div></body>";
     $connection->close();
 
 
