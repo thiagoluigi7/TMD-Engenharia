@@ -37,6 +37,11 @@ h1 {
     font-family: arial;
 }
 
+.textoEditar {
+    margin-top: 100px;
+    color: white
+}
+
 #botao { 
     text-align: center
 }
