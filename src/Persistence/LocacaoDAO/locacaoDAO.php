@@ -76,52 +76,26 @@
                         FROM locacao AS L
                             JOIN cliente AS C ON L.Cliente_idCliente = C.idCliente
                             JOIN funcionario AS F on L.Funcionario_idFuncionario = F.idFuncionario";
-                        // WHERE L.
 
             return $connection->query($sql);
 
         }
 
-        function consultarCPF($cpf, $connection) {
-            $sql = "SELECT * FROM `cliente`";
+        function editar($locacao, $connection) {
+
+            $sql = "SELECT * FROM `locacao`";
             $res = $connection->query($sql);
             if (!empty($res) and $res->num_rows > 0) {
                 while ($registro = $res->fetch_assoc()) {
-                    if ($registro['cpf'] == $cpf) {
-                        $nome = $registro['nome'];
-                        $cpf = $registro['cpf'];
-                        $email = $registro['email'];
-                        $telefone = $registro['telefone'];
-                        $senha = $registro['senha'];
-                        $endereco = $registro['endereco'];
-                        $cliente = new Cliente($nome, $cpf, $email, $telefone, $senha, $endereco);
-                        $connection->close();
-                        return $cliente;
-                    }
-                }
-                $connection->close();
-                return false; 
-            } else {
-                echo "Falha ao localizar cliente: " . $connection->error;
-                $connection->close();
-                return $connection->errno;
-            }
-        }
-
-        function editar($cliente, $connection) {
-
-            $sql = "SELECT * FROM `cliente`";
-            $res = $connection->query($sql);
-            if (!empty($res) and $res->num_rows > 0) {
-                while ($registro = $res->fetch_assoc()) {
-                    if ($registro['cpf'] == $cliente->getCpf())  {
-                        $sql = "UPDATE `cliente` SET 
-                                                    `nome` = '" . $cliente->getNome() . "', 
-                                                    `email` = '" . $cliente->getEmail() . "', 
-                                                    `telefone` = '" . $cliente->getTelefone() . "', 
-                                                    `senha` = '" . $cliente->getSenha() . "', 
-                                                    `endereco` = '" . $cliente->getEndereco() ."' 
-                                                    WHERE `cliente`.`cpf` =" . $cliente->getCpf() ."";
+                    if ($registro['idLoc'] == $locacao->getId())  {
+                        $sql = "UPDATE `locacao` SET 
+                                                    `Itens_idItem` = '" . $locacao->getItem() . "', 
+                                                    `Cliente_idCliente` = '" . $locacao->getNomeCliente() . "', 
+                                                    `Funcionario_idFuncionario` = '" . $locacao->getNomeFuncionario() . "', 
+                                                    `dataInicial` = '" . $locacao->getDataInicial() . "', 
+                                                    `dataFinal` = '" . $locacao->getDataFinal() ."' 
+                                                    'valorTotal' = '" . $locacao->getValorTotal() . "'
+                                                    WHERE `locacao`.`idLoc` =" . $locacao->getId() ."";
                         if($connection->query($sql) === TRUE) {
                             $connection->close();
                             return true;
