@@ -2,15 +2,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Excluir Locação</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Funcionario.css">
     </head>
 
     <body>
-        <form action="../../../Controller/CRUDLocacao/removerLocacao.php" method="POST">
-            <h1>Excluir Locação</h1><br>
-            
-            ID: <input type="text" name="id"><br>
+        <div id="interface">
+            <div id="fundoIserir">
+                <form action="../../../Controller/CRUDLocacao/I_EditarLocaçãoDados.php" method="POST">
+                    <h1 class="margintop100">Excluir Locação</h1> <br>
+                    <input type="text" name="funcionario" placeholder="ID do funcionário">
+                    <input type="text" name="cliente" placeholder="ID do cliente">
 
-            <input type="submit" value="Excluir">
-        </form>
+                    <div id="botao">
+                        <input type="submit" value="Excluir" class="botaoEnviar vermelhoClaro">
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
