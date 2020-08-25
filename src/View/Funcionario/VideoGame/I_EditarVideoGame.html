@@ -1,17 +1,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Editar Video Game</title>
+        <title>Video Game Jogo</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Funcionario.css">
     </head>
 
     <body>
-        <form action="EditarVideoGame.php" method="POST">
-            <h1>Editar Video Game</h1><br>
-            
-            ID: <input type="text" name="id"><br>
+        <div id="interface" class="vermelho">
+            <div id="retangulo" class="vermelho"></div>
+            <div id="fundoIserir">
+                <form action="EditarVideoGame.php" method="POST">
+                    <h1 class="margintop150">Editar Video Game</h1>
 
-            <input type="submit" value="Editar">
-
-        </form>
+                    <input type="text" name="id" required placeholder="ID">
+                    
+                    <div id="botao">
+                        <input type="submit" value="Editar" class="botaoEnviar vermelhoClaro">
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
