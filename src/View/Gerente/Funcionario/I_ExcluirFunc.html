@@ -1,16 +1,25 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Excluir Funcionario</title>
+        <title>Excluir Funcionário</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Gerente.css">
     </head>
 
     <body>
-        <form action="../../../Controller/CRUDFuncionario/removerFuncionario.php" method="POST">
-            <h1>Ecluir Funcionario</h1>
+        <div id="interface">
+            <form action="../../../Controller/CRUDFuncionario/removerFuncionario.php" method="POST">
+                <div id="retangulo" class="amarelo"></div>
+                <div id="fundoIserir">
+                    <h1 class="textoEditar">Excluir Funcionário</h1>
 
-            cpf: <input type="text" name="cpf" required> <br>
-            
-            <input type="submit" value="Excluir">
-        </form>
+                    <input type="text" name="cpf" placeholder="CPF" required> <br>
+                    
+                    <div id="botao">
+                        <input type="submit" value="Editar" class="botaoEnviar amareloClaro">
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
