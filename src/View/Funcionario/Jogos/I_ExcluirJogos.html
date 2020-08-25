@@ -2,15 +2,24 @@
     <head>
         <meta charset="UTF-8">
         <title>Excluir Jogo</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Funcionario.css">
     </head>
 
     <body>
-        <form action="ExcluirJogos.php" method="POST">
-            <h1>Excluir Jogo</h1>
+        <div id="interface" class="vermelho">
+            <div id="retangulo" class="vermelho"></div>
+            <div id="fundoIserir">
+                <form action="ExcluirJogos.php" method="POST">
+                    <h1 class="margintop150">Excluir Jogo</h1>
 
-            ID: <input type="text" name="id" required> <br>
-
-            <input type="submit" value="Excluir">
-        </form>
+                    <input type="text" name="id" required placeholder="ID">
+                    
+                    <div id="botao">
+                        <input type="submit" value="Editar" class="botaoEnviar vermelhoClaro">
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
