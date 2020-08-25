@@ -1,23 +1,35 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Inserir Funcionario</title>
+        <title>Inserir Funcionário</title>
+        <link rel="stylesheet" href="../../css/style.css">
+        <link rel="stylesheet" href="../../css/Gerente.css">
     </head>
 
     <body>
-        <form action="../../../Controller/CRUDFuncionario/inserirFuncionario.php" method="POST">
-            <h1>Inserir Funcionario</h1>
+        <div id="interface">
+            <div id="retangulo" class="amarelo"></div>
+            <form action="../../../Controller/CRUDFuncionario/inserirFuncionario.php" method="POST">
             
-            Nome: <input type="text" name="nome">
-            CPF: <input type="text" name="cpf">
-            Salário: <input type="text" name="salario">
-            Endereço: <input type="text" name="endereco">
-            Email: <input type="email" name="email">
-            Telefone: <input type="text" name="telefone">
-            Senha: <input type="password" name="senha">
+                <div id="fundoIserir">
+                    <h1 class="funcionarioText">Inserir Funcionário</h1>
+            
+                    <input type="text" name="nome" placeholder="Nome">
+                    <input type="text" name="cpf" placeholder="CPF">
+                    <input type="text" name="salario" placeholder="Salário">
+                    <input type="text" name="endereco" placeholder="Endereço">
+                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" name="telefone" placeholder="Telefone">
+                    <input type="password" name="senha" placeholder="Senha">
 
-            <input type="submit" value="Inserir">
+                    <div id="botao">
+                        <input type="submit" value="Inserir" class="botaoEnviar amareloClaro">
+                    </div>
+                </div>
 
-        </form>
+
+
+            </form>
+        </div>
     </body>
 </html>
