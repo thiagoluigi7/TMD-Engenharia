@@ -88,14 +88,18 @@
             if (!empty($res) and $res->num_rows > 0) {
                 while ($registro = $res->fetch_assoc()) {
                     if ($registro['idLoc'] == $locacao->getId())  {
-                        $sql = "UPDATE `locacao` SET 
-                                                    `Itens_idItem` = '" . $locacao->getItem() . "', 
-                                                    `Cliente_idCliente` = '" . $locacao->getNomeCliente() . "', 
-                                                    `Funcionario_idFuncionario` = '" . $locacao->getNomeFuncionario() . "', 
-                                                    `dataInicial` = '" . $locacao->getDataInicial() . "', 
-                                                    `dataFinal` = '" . $locacao->getDataFinal() ."' 
-                                                    'valorTotal' = '" . $locacao->getValorTotal() . "'
-                                                    WHERE `locacao`.`idLoc` =" . $locacao->getId() ."";
+                        $sql = "UPDATE 
+                                    `locacao` 
+                                SET 
+                                    `Itens_idItem` = '" . $locacao->getItem() . "', 
+                                    `Cliente_idCliente` = '" . $locacao->getNomeCliente() . "', 
+                                    `Funcionario_idFuncionario` = '" . $locacao->getNomeFuncionario() . "', 
+                                    `dataInicial` = '" . $locacao->getDataInicial() . "', 
+                                    `dataFinal` = '" . $locacao->getDataFinal() ."' ,
+                                    `valorTotal` = '" . $locacao->getValorTotal() . "'
+                                WHERE
+                                    `locacao`.`idLoc` ='" . $locacao->getId() ."'";
+                                    
                         if($connection->query($sql) === TRUE) {
                             $connection->close();
                             return true;

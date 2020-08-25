@@ -2,11 +2,12 @@
 
     include_once '../../Model/locacao.php';
     include_once '../../Persistence/connection.php';
-    include_once '../../Persistence/locacaoDAO.php';
+    include_once '../../Persistence/LocacaoDAO/locacaoDAO.php';
 
     $connection = new Connection();
     $connection = $connection->getConnection();
     $locacaodao = new locacaoDAO();
+    $id = $_POST['idLocacao'];
     $locacao = $locacaodao->consultarId($id, $connection);
 
     echo "
@@ -27,13 +28,13 @@
                             <h1>Editar Locação</h1>
 
 
-                            <!-- <input type='text' name='id' readonly value='"   . $locacao->getId() . "'> -->
-                            <input type='date' name='dataInicial' value='"          . $cliente->getDataInicial(). "'>
-                            <input type='date' name='dataFinal' value='"  . $cliente->getDataFinal() . "'>
-                            <input type='text' name='valorTotal' value='"       . $cliente->getValorTotal() . "'>
-                            <input type='text' name='nomeFuncionario' value='"  . $cliente->getNomeFuncionario() ."'>
-                            <input type='text' name='nomeCliente' value='"    . $cliente->getNomeCliente() . "'>  
-                            <input type='text' name='item' value='"    . $cliente->getItem() . "'>    
+                            <input type='text' name='id' readonly value='"      . $locacao->getId() . "'>
+                            <input type='date' name='dataInicial' value='"      . $locacao->getDataInicial(). "'>
+                            <input type='date' name='dataFinal' value='"        . $locacao->getDataFinal() . "'>
+                            <input type='text' name='valorTotal' value='"       . $locacao->getValorTotal() . "'>
+                            <input type='text' name='nomeFuncionario' value='"  . $locacao->getNomeFuncionario() ."'>
+                            <input type='text' name='nomeCliente' value='"      . $locacao->getNomeCliente() . "'>  
+                            <input type='text' name='item' value='"             . $locacao->getItem() . "'>    
                             
                             <div id='botao'>
                             <input type='submit' value='Editar' class='botaoEnviar vermelhoClaro'>
