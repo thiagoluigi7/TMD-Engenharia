@@ -13,22 +13,33 @@
             <head>
                 <meta charset='UTF-8'>
                 <title>Editar Cliente</title>
+                <link rel="stylesheet" href="../View/css/style.css">
+                <link rel="stylesheet" href="../View/css/Gerente.css">
             </head>
 
             <body>
-                <form action='editarCliente.php' method='POST'>
-                    <h1>Editar Cliente</h1>
-
-                    CPF: <input type='text' name='cpf' readonly value='"   . $cliente->getCpf() . "'>
-                    Nome: <input type='text' name='nome' value='"          . $cliente->getNome(). "'>
-                    Endereço: <input type='text' name='endereco' value='"  . $cliente->getEndereco() . "'>
-                    Email: <input type='email' name='email' value='"       . $cliente->getEmail() . "'>
-                    Telefone: <input type='text' name='telefone' value='"  . $cliente->getTelefone() ."'>
-                    Senha: <input type='password' name='senha' value='"    . $cliente->getSenha() . "'>   
+                <div id='interface'>
+                    <div id='retangulo' class='amarelo'></div>
                     
-                    <input type='submit' value='Editar'>
+                    <div id='fundoIserir' class='amarelo'>
+                        <form action='editarCliente.php' method='POST'>
+                            <h2 class='branco' >Editar Cliente</h2>
 
-                </form>
+
+                            <input type='text' name='cpf' readonly value='"   . $cliente->getCpf() . "'>
+                            <input type='text' name='nome' value='"          . $cliente->getNome(). "'>
+                            <input type='text' name='endereco' value='"  . $cliente->getEndereco() . "'>
+                            <input type='email' name='email' value='"       . $cliente->getEmail() . "'>
+                            <input type='text' name='telefone' value='"  . $cliente->getTelefone() ."'>
+                            <input type='password' name='senha' value='"    . $cliente->getSenha() . "'>   
+                            
+                            <div id="botao">
+                            <input type="submit" value="Editar" class="botaoEnviar amareloClaro">
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
             </body>
         </html>
         ";
