@@ -148,7 +148,7 @@
         } else if ($_POST['funcao'] == "cliente") {
             if(autenticar($_POST["cpf"], $_POST["senha"], $_POST["funcao"]) == true) {
                 //echo "Cliente autenticado.";
-                echo "<script type='text/javascript'>location.href = '/View/Cliente/I_HomeCliente.php';</script>";
+                echo "<script type='text/javascript'>location.href = '/View/Cliente/I_HomeCliente.html';</script>";
             } else {
                 //echo "Erro ao autenticar o cliente.";
                 echo "<script type='text/javascript'>location.href = '/View/IE_Login.html';</script>";

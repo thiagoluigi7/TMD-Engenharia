@@ -13,20 +13,18 @@
         echo "
         <table>
             <tr>
-                <th>Id da Locação</th>
-                <th>Id do item</th>
-                <th>Id do Cliente</th>
-                <th>Id do funcionário responsável</th>
+                <th>Nome do cliente</th>
+                <th>Email do cliente</th>
+                <th>Nome do funcionário responsável</th>
                 <th>Data de locação</th>
                 <th>Data de devolução</th>
                 <th>Valor Total</th>
             </tr>";
         while($registro = $resultado->fetch_assoc()) {
             echo "<tr>";
-            echo    "<td>".$registro['idLoc']."</td>
-                    <td>".$registro['Itens_idItem']."</td>
-                    <td>".$registro['Cliente_idCliente']."</td>
-                    <td>".$registro['Funcionario_idFuncionario']."</td>
+            echo    "<td>".$registro['nomeCliente']."</td>
+                    <td>".$registro['emailCliente']."</td>
+                    <td>".$registro['nomeFuncionario']."</td>
                     <td>".$registro['dataInicial']."</td>
                     <td>".$registro['dataFinal']."</td>
                     <td>".$registro['valorTotal']."</td>";
