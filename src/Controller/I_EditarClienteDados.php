@@ -13,8 +13,8 @@
             <head>
                 <meta charset='UTF-8'>
                 <title>Editar Cliente</title>
-                <link rel="stylesheet" href="../View/css/style.css">
-                <link rel="stylesheet" href="../View/css/Gerente.css">
+                <link rel='stylesheet' href='../View/css/style.css'>
+                <link rel='stylesheet' href='../View/css/Gerente.css'>
             </head>
 
             <body>
@@ -33,8 +33,8 @@
                             <input type='text' name='telefone' value='"  . $cliente->getTelefone() ."'>
                             <input type='password' name='senha' value='"    . $cliente->getSenha() . "'>   
                             
-                            <div id="botao">
-                            <input type="submit" value="Editar" class="botaoEnviar amareloClaro">
+                            <div id='botao'>
+                            <input type='submit' value='Editar' class='botaoEnviar amareloClaro'>
                             </div>
 
                         </form>
