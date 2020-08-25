@@ -55,7 +55,7 @@
                    "Nome: "     . $this->getNome()     . "<br>" .
                    "Email: "    . $this->getEmail()    . "<br>" .
                    "Telefone: " . $this->getTelefone() . "<br>" .
-                   "Senha: "    . $this->getSenha      . "<br>" .
+                   "Senha: "    . $this->getSenha()    . "<br>" .
                    "Endereço: " . $this->getEndereco() . "<br>";
                 }
 
