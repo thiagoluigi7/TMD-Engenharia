@@ -39,7 +39,7 @@ h1 {
 
 .textoEditar {
     margin-top: 100px;
-    color: white
+    color: black;
 }
 
 #botao { 
@@ -55,3 +55,4 @@ h1 {
     font-size: 18px;
     margin-top: 10px;
 }
+

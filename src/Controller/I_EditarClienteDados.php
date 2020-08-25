@@ -23,7 +23,7 @@
                     
                     <div id='fundoIserir' class='amarelo'>
                         <form action='editarCliente.php' method='POST'>
-                            <h2 class='branco' >Editar Cliente</h2>
+                            <h1>Editar Cliente</h1>
 
 
                             <input type='text' name='cpf' readonly value='"   . $cliente->getCpf() . "'>
