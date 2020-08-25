@@ -2,10 +2,23 @@
     <head>
         <meta charset="UTF-8">
         <title>Alterar Dados</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/Cliente.css">
     </head>
 
     <body>
-        Endereço: <input type="text" name="endereço"> <br>
-        Senha: <input type="password" name="senha"> <br>
+        <div id="interface">
+            <div id="retangulo" class="azul"></div>
+            <div id="fundoIserir">
+                <h1 class="margintop100">Alterar Dados</h1>
+                <form action="" method="POST">
+                    <input type="text" name="endereço" placeholder="Endereço">
+                    <input type="password" name="senha" placeholder="Senha" >
+                    <div id="botao">
+                        <input type="submit" value="Alterar" class="botaoEnviar azulClaro">
+                    </div>
+                </form>
+            </div>
+        </div>
     </body>
 </html>
