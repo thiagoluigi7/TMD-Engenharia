@@ -8,12 +8,15 @@
 
         function salvar($cliente, $connection) {
 
-            $sql = "INSERT INTO `cliente`(`nome`, `cpf`, `email`, `telefone`, `senha`, `endereco`) VALUES ('" . $cliente->getNome()     . "','" . 
-                                                                                                                $cliente->getCpf()      . "','" . 
-                                                                                                                $cliente->getEmail()    . "','" . 
-                                                                                                                $cliente->getTelefone() . "','" .
-                                                                                                                $cliente->getSenha()    . "','" .
-                                                                                                                $cliente->getEndereco() . "')";
+            $sql = "INSERT INTO `cliente`
+                        (`nome`, `cpf`, `email`, `telefone`, `senha`, `endereco`) 
+                    VALUES 
+                        ('" . $cliente->getNome()     . "','" . 
+                              $cliente->getCpf()      . "','" . 
+                              $cliente->getEmail()    . "','" . 
+                              $cliente->getTelefone() . "','" .
+                              $cliente->getSenha()    . "','" .
+                              $cliente->getEndereco() . "')";
 
             if($connection->query($sql) === TRUE) {
                 $connection->close();
