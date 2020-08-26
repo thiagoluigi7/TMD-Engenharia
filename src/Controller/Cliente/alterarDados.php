@@ -18,15 +18,11 @@
 
     $cliente = $clientedao->consultarCPF($cpf, $connection);
 
-    if(isset($_POST['senha'])) {
-        $senha = $_POST['senha'];
-        $cliente->setSenha($senha);
-    }
+    $senha = $_POST['senha'];
+    $cliente->setSenha($senha);
 
-    if(isset($_POST['endereco'])) {
-        $endereco = $_POST['endereco'];
-        $cliente->setEndereco($endereco);
-    }
+    $endereco = $_POST['endereco'];
+    $cliente->setEndereco($endereco);
 
     if($clientedao->editar($cliente, $connection2) == TRUE) {
         echo "<script type='text/javascript'>location.href = '/View/Cliente/IS_SucessoCliente.html';</script>";

@@ -11,7 +11,6 @@
         private $item;
 
         function __construct(
-            $idLoc,
             $dataInicial,
             $dataFinal,
             $valorTotal,
@@ -20,7 +19,6 @@
             $item
         ) {
 
-            $this->idLoc = $idLoc;
             $this->dataInicial = $dataInicial;
             $this->dataFinal = $dataFinal;
             $this->valorTotal = $valorTotal;
@@ -32,6 +30,10 @@
 
         function getId() {
             return $this->idLoc;
+        }
+
+        function setId($idLoc) {
+            $this->idLoc = $idLoc;
         }
 
         function getDataInicial() {

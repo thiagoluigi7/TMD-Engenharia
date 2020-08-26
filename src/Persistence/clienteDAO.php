@@ -1,6 +1,7 @@
 <?php
 
-    include_once '../../Model/cliente.php'; 
+    include_once '../Model/cliente.php'; 
+    include_once '../../Model/cliente.php';
 
     class clienteDAO {
 

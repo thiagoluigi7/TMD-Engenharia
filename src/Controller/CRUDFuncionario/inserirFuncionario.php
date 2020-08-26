@@ -7,7 +7,7 @@
     $connection = new Connection();
     $connection = $connection->getConnection();
 
-    $funcionario = new Funcionario($_POST["nome"], $_POST["cpf"], $_POST["salario"], $_POST["email"], $_POST["telefone"], $_POST["senha"], $_POST["endereco"]);
+    $funcionario = new Funcionario($_POST["nome"], $_POST["cpf"], $_POST["email"], $_POST["salario"], $_POST["telefone"], $_POST["senha"], $_POST["endereco"]);
 
     $funcionariodao = new funcionarioDAO();
     if($funcionariodao->salvar($funcionario, $connection) == TRUE) {

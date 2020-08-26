@@ -41,7 +41,8 @@
                         $dataInicial = $registro['dataInicial'];
                         $dataFinal = $registro['dataFinal'];
                         $valorTotal = $registro['valorTotal'];
-                        $locacao = new Locacao($id, $dataInicial, $dataFinal, $valorTotal, $idFuncionario, $idCliente, $itemId); 
+                        $locacao = new Locacao($dataInicial, $dataFinal, $valorTotal, $idFuncionario, $idCliente, $itemId); 
+                        $locacao->setId($id);
                         $connection->close();
                         return $locacao;
                     } 

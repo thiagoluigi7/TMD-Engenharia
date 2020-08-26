@@ -11,7 +11,7 @@
     $connection2 = $connection2->getConnection();
 
     $locacaodao = new locacaoDAO();
-    $locacao = $locacaodao->consultarId($_POST['id'], $connection);
+    $locacao = $locacaodao->consultarId($_POST['idLocacao'], $connection);
 
     if($locacaodao->remover($locacao, $connection2) == TRUE) {
         echo "<script type='text/javascript'>location.href = '/View/Funcionario/IS_SucessoF.html';</script>";
