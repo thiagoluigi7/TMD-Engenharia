@@ -24,7 +24,9 @@ Todos os membros estão utilizando o Windows 10 e instalaram o XAMPP. O XAMPP é
     Iremos utilizar apenas a branch ```master```.
 - Definição da estrutura do repositório:  
     Na pasta ```doc``` estará toda a documentação do sistema. Tais como: casos de uso, documento de requisitos, padrões adotados, diagrama de classes e diagrama de sequência. Cada documento terá a sua própria pasta. Dentro de cada pasta terá o PDF e o arquivo editável do documento. Na pasta ```doc``` terá o projeto do banco de dados com um esboço de como ele será projetado. Haverá um README com o conteúdo do documento "Visão geral do produto" para já passar a visão geral no momento em que a pessoa abrir a pasta. O arquivo do protótipo do projeto também estará na pasta ```doc```  dentro de sua própria subpasta junto das telas do protótipo. <br>
-    Na pasta ```src``` estará o código do projeto. O projeto seguirá o padrão MVC.
+    Na pasta ```src``` estará o código do projeto. O projeto seguirá o padrão MVC. <br>
+    Na pasta ```teste``` estará o código para a realização dos testes.
+    A pasta ```vendor``` contém os arquivos necessários para o phpunit.
 
 
 
