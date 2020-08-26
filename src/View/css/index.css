@@ -6,7 +6,7 @@ h1 {
     text-transform: uppercase;
 }
 
-p {
+.textoDescricao {
     text-align: center;
     font-family: verdana;
     letter-spacing: 1px;
