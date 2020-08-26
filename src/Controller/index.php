@@ -10,7 +10,7 @@
     if($conn == null){
         $conn = new Connection();
         $conn = $conn->getConnection();
-        $sql_gerente = "CREATE TABLE IF NOT EXISTS retrowavedb.Gerente2 (
+        $sql_gerente = "CREATE TABLE IF NOT EXISTS `retrowavedb`.`Gerente` (
                         idGerente INT NOT NULL AUTO_INCREMENT,
                         nome VARCHAR(60) NOT NULL,
                         cpf VARCHAR(11) NOT NULL,
@@ -96,27 +96,6 @@
                         ON UPDATE NO ACTION)
                         ENGINE = InnoDB;";
 
-        $sql_jogos = "CREATE TABLE IF NOT EXISTS `retrowavedb`.`Jogos` (
-                        `plataforma` VARCHAR(50) NOT NULL,
-                        `Itens_idItem` INT NOT NULL,
-                        PRIMARY KEY (`Itens_idItem`),
-                        CONSTRAINT `fk_Jogos_Itens1`
-                        FOREIGN KEY (`Itens_idItem`)
-                        REFERENCES `retrowavedb`.`Itens` (`idItem`)
-                        ON DELETE NO ACTION
-                        ON UPDATE NO ACTION)
-                        ENGINE = InnoDB;";
-
-        $sql_videogames = "CREATE TABLE IF NOT EXISTS `retrowavedb`.`VideoGames` (
-                            `tipo` VARCHAR(60) NOT NULL,
-                            `Itens_idItem` INT NOT NULL,
-                            PRIMARY KEY (`Itens_idItem`),
-                            CONSTRAINT `fk_VideoGames_Itens1`
-                            FOREIGN KEY (`Itens_idItem`)
-                            REFERENCES `retrowavedb`.`Itens` (`idItem`)
-                            ON DELETE NO ACTION
-                            ON UPDATE NO ACTION)
-                            ENGINE = InnoDB;";
 
         $sql_gerente_insert = "INSERT INTO `gerente` (`nome`,`cpf`,`salario`,`telefone`,`senha`,`endereco`,`email`)  VALUES ('Vlad','99999999999',5500.00,'35985858585','admin234','Lavras','vlad@ufla.br');";
 
