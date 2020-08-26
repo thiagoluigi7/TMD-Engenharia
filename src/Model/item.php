@@ -1,6 +1,6 @@
 <?php
 
-    class Itens {
+    class Item {
         
     private $id;
     private $nome;
@@ -9,13 +9,11 @@
     private $quant;
 
     function __construct(
-        $id,
         $nome,
         $periodoLoc,
         $valor,
         $quant
     ) {
-        $this->id = $id;
         $this->nome = $nome;
         $this->periodoLoc = $periodoLoc;
         $this->valor = $valor;
@@ -41,6 +39,18 @@
     function getQuant() {
         return $this->quant;
     }
+
+    function setId($id) {
+        $this->id = $id;
+    }
+
+    function __toString() {
+        return "ID: "                    . $this->getId()      . "<br>" . 
+               "Nome: "                  . $this->getNome()     . "<br>" .
+               "Periodo de locação: "    . $this->getPeriodoLoc()    . "<br>" .
+               "Valor: "                 . $this->getValor() . "<br>" .
+               "Quantidade: "            . $this->getQuant()    . "<br>";
+            }
 
     }
 
