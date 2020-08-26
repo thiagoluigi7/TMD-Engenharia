@@ -29,7 +29,7 @@
             tr:nth-child(even){background-color: #f2f2f2}
 
             th {
-            background-color: #fcde34b2;
+            background-color: #4e9bffb9;
             color: black;
             }
 
