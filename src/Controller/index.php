@@ -3,6 +3,8 @@
     include_once 'autenticar.php';
     include_once '../Persistence/connection.php';
 
+    session_start();
+
     $conn = null;
     
     if($conn == null){
@@ -148,6 +150,8 @@
         } else if ($_POST['funcao'] == "cliente") {
             if(autenticar($_POST["cpf"], $_POST["senha"], $_POST["funcao"]) == true) {
                 //echo "Cliente autenticado.";
+                $cpf = $_POST["cpf"];
+                $_SESSION["cpf"] = $cpf;
                 echo "<script type='text/javascript'>location.href = '/View/Cliente/I_HomeCliente.html';</script>";
             } else {
                 //echo "Erro ao autenticar o cliente.";

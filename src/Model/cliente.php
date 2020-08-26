@@ -46,8 +46,16 @@
             return $this->senha;
         }
 
+        function setSenha($senha) {
+            $this->senha = $senha;
+        }
+
         function getEndereco() {
             return $this->endereco;
+        }
+
+        function setEndereco($endereco) {
+            $this->endereco = $endereco;
         }
 
         function __toString() {
