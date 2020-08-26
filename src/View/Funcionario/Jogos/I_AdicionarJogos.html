@@ -9,13 +9,14 @@
     <body>
         <div id="interface">
             <div id="retangulo" class="vermelho"> <div id="texto1">Adicionar</div> <div id="texto2">Voltar</div></div>
-            <form action="AdicionarJogos.php" method="POST">
+            <form action="../../../Controller/CRUDItens/inserirItem.php" method="POST">
                 <div id="fundoIserir">
                     <h1>Adicionar Jogo</h1>
                     
-                    <input type="text" name="id" placeholder="ID">
+                   <!--<input type="text" name="id" placeholder="ID">-->
                     <input type="text" name="nome" placeholder="Nome">
-                    <input type="text" name="plataforma" placeholder="Plataforma">
+                    <input type="text" name="periodoLoc" placeholder="Periodo de locação">
+                    <input type="text" name="valor" placeholder="Valor">
                     <input type="text" name="copias" placeholder="Cópias">
                     
                     <div id="botao">
