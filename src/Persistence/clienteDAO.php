@@ -81,13 +81,16 @@
             if (!empty($res) and $res->num_rows > 0) {
                 while ($registro = $res->fetch_assoc()) {
                     if ($registro['cpf'] == $cliente->getCpf())  {
-                        $sql = "UPDATE `cliente` SET 
-                                                    `nome` = '" . $cliente->getNome() . "', 
-                                                    `email` = '" . $cliente->getEmail() . "', 
-                                                    `telefone` = '" . $cliente->getTelefone() . "', 
-                                                    `senha` = '" . $cliente->getSenha() . "', 
-                                                    `endereco` = '" . $cliente->getEndereco() ."' 
-                                                    WHERE `cliente`.`cpf` =" . $cliente->getCpf() ."";
+                        $sql = "UPDATE 
+                                    `cliente` 
+                                SET 
+                                    `nome` = '" . $cliente->getNome() . "', 
+                                    `email` = '" . $cliente->getEmail() . "', 
+                                    `telefone` = '" . $cliente->getTelefone() . "', 
+                                    `senha` = '" . $cliente->getSenha() . "', 
+                                    `endereco` = '" . $cliente->getEndereco() ."' 
+                                WHERE
+                                    `cliente`.`cpf` =" . $cliente->getCpf() ."";
                         if($connection->query($sql) === TRUE) {
                             $connection->close();
                             return true;
@@ -100,7 +103,7 @@
                 $connection->close();
                 return false;
             } else {
-                echo "Falha ao realizar login: " . $connection->error;
+                echo "Falha ao realizar edição: " . $connection->error;
                 $connection->close();
                 return $connection->errno;
             }
