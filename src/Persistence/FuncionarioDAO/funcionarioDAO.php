@@ -1,5 +1,6 @@
 <?php
 
+    include_once '../../Model/funcionario.php';
     class funcionarioDAO {
 
         function __construct() {}
@@ -48,6 +49,69 @@
 
         }
 
+        function consultarCPF($cpf, $connection) {
+            $sql = "SELECT * FROM `funcionario`";
+            $res = $connection->query($sql);
+            if (!empty($res) and $res->num_rows > 0) {
+                while ($registro = $res->fetch_assoc()) {
+                    if ($registro['cpf'] == $cpf) {
+                        $nome = $registro['nome'];
+                        $cpf = $registro['cpf'];
+                        $salario = $registro['salario'];
+                        $email = $registro['email'];
+                        $telefone = $registro['telefone'];
+                        $senha = $registro['senha'];
+                        $endereco = $registro['endereco'];
+                        $funcionario = new Funcionario($nome, $cpf, $email, $salario, $telefone, $senha, $endereco);
+                        $connection->close();
+                        return $funcionario;
+                    }
+                }
+                $connection->close();
+                return false; 
+            } else {
+                echo "Falha ao localizar funcionário: " . $connection->error;
+                $connection->close();
+                return $connection->errno;
+            }
+        }
+
+        function editar($funcionario, $connection) {
+
+            $sql = "SELECT * FROM `funcionario`";
+            $res = $connection->query($sql);
+            if (!empty($res) and $res->num_rows > 0) {
+                while ($registro = $res->fetch_assoc()) {
+                    if ($registro['cpf'] == $funcionario->getCpf())  {
+                        $sql = "UPDATE 
+                                    `funcionario` 
+                                SET 
+                                    `nome` = '"     . $funcionario->getNome() . "',
+                                    `salario` = '"  . $funcionario->getSalario() . "',
+                                    `email` = '"    . $funcionario->getEmail() . "', 
+                                    `telefone` = '" . $funcionario->getTelefone() . "', 
+                                    `senha` = '"    . $funcionario->getSenha() . "', 
+                                    `endereco` = '" . $funcionario->getEndereco() ."' 
+                                WHERE
+                                    `funcionario`.`cpf` =" . $funcionario->getCpf() ."";
+                        if($connection->query($sql) === TRUE) {
+                            $connection->close();
+                            return true;
+                        } else {
+                            $connection->close();
+                            return false;
+                        }
+                    } 
+                }
+                $connection->close();
+                return false;
+            } else {
+                echo "Falha ao realizar edição: " . $connection->error;
+                $connection->close();
+                return $connection->errno;
+            }
+
+        }
 
     }
 
