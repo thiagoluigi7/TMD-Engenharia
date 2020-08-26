@@ -15,27 +15,24 @@
         }
 
         public function testeConsultarCPF() {
-            $cliente = new Cliente(`Davi`, `11111111111`, `davi.castro@estudante.ufla.br`, `11911111111`, `123`, `Lavras`);
             $connection = new Connection();
             $connection = $connection->getConnection();
-            $cpf = 11111111111;
+            
+            $cliente = new Cliente("Davi", "11111111111", "davi@ufla.br", "11911111111", "123", "Lavras");
+
+            $cpf = '11111111111';
+
             $sql = "SELECT * FROM `cliente`";
             $res = $connection->query($sql);
             if (!empty($res) and $res->num_rows > 0) {
                 while ($registro = $res->fetch_assoc()) {
                     if ($registro['cpf'] == $cpf) {
-                        $nome = $registro['nome'];
-                        $cpf = $registro['cpf'];
-                        $email = $registro['email'];
-                        $telefone = $registro['telefone'];
-                        $senha = $registro['senha'];
-                        $endereco = $registro['endereco'];
-                        $this->assertEquals($cliente['nome'],$registro['nome']);
-                        $this->assertAttributeSame($cliente['cpf'],$registro['cpf']);
-                        $this->assertAttributeSame($cliente['email'],$registro['email']);
-                        $this->assertAttributeSame($cliente['telefone'],$registro['telefone']);
-                        $this->assertAttributeSame($cliente['senha'],$registro['senha']);
-                        $this->assertAttributeSame($cliente['endereco'],$registro['endereco']);
+                        $this->assertEquals($cliente->getNome(),    $registro['nome']);
+                        $this->assertEquals($cliente->getCpf(),     $registro['cpf']);
+                        $this->assertEquals($cliente->getEmail(),   $registro['email']);
+                        $this->assertEquals($cliente->getTelefone(),$registro['telefone']);
+                        $this->assertEquals($cliente->getSenha(),   $registro['senha']);
+                        $this->assertEquals($cliente->getEndereco(),$registro['endereco']);
                     }
                 }
             }
@@ -43,17 +40,26 @@
 
         public function testeRemover() {
 
-            $cliente = new Cliente(`Davi`, `11111111111`, `davi.castro@estudante.ufla.br`, `11911111111`, `123`, `Lavras`);
-            $cpf = 11111111111;
-            $sql = "DELETE FROM `cliente` WHERE `cliente`.`cpf` = '" . $cpf . "'";
-
             $connection = new Connection();
             $connection = $connection->getConnection();
 
-            if($connection->query($sql) === TRUE) {
+            $connection2 = new Connection();
+            $connection2 = $connection2->getConnection();
+
+            $connection3 = new Connection();
+            $connection3 = $connection3->getConnection();
+
+            $cliente = new Cliente("Megami", "987", "Megami@ufla.br", "987654321", "123", "Lavras");
+            $clientedao = new clienteDAO();
+            $clientedao->salvar($cliente, $connection2);
+
+            $cpf = '987';
+            $sql = "DELETE FROM `cliente` WHERE `cliente`.`cpf` = '" . $cpf . "'";
+
+            if($connection3->query($sql) === TRUE) {
                 $sql2 = "SELECT FROM `cliente` WHERE `cliente`.`cpf` = '" . $cpf . "'";
-                $this->assertNull($sql2);
-                $connection->close();
+                $this->assertFalse($connection3->query($sql2));
+                $connection3->close();
                 return true;
             }   
         }
