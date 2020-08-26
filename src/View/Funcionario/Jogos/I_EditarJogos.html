@@ -1,17 +1,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Editar Jogo</title>
+        <title>Editar Item</title>
         <link rel="stylesheet" href="../../css/style.css">
         <link rel="stylesheet" href="../../css/Funcionario.css">
     </head>
 
     <body>
         <div id="interface">
-            <div id="retangulo" class="vermelho"> <div id="texto1">Editar</div> <div id="texto2">Voltar</div></div>
+            <div id="retangulo" class="vermelho"> <div id="texto1">Editar</div> <a href="../I_HomeFunc.html" > <div id="texto2">Voltar</div></a> </div>
             <div id="fundoIserir">
                 <form action="../../../Controller/CRUDItens/I_EditarJogosDados.php" method="POST">
-                    <h1 class="margintop150">Editar Jogo</h1>
+                    <h1 class="margintop150">Editar Item</h1>
 
                     <input type="text" name="id" required placeholder="ID">
                     
