@@ -26,7 +26,7 @@
                             `idFuncionario` INT NOT NULL AUTO_INCREMENT,
                             `nome` VARCHAR(60) NOT NULL,
                             `cpf` VARCHAR(11) NOT NULL,
-                            `salario` DECIMAL NOT NULL,
+                            `salario` DECIMAL(10,2) NOT NULL,
                             `email` VARCHAR(100) NOT NULL,
                             `telefone` VARCHAR(11) NOT NULL,
                             `senha` VARCHAR(45) NOT NULL,
